@@ -90,7 +90,7 @@ function createConfig(connectionUrl) {
     "imageOptimization": {
       "resize": false
     }
-  }
+}
 `
   return config;
 }
