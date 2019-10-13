@@ -30,7 +30,7 @@ function createConfig(connectionUrl) {
   }
 
   config = `{
-    "url": ${process.env.PUBLIC_URL},
+    "url": "${process.env.PUBLIC_URL}",
     "logging": {
       "level": "info",
       "transports": ["stdout"]
@@ -40,8 +40,8 @@ function createConfig(connectionUrl) {
       "options": {
         "service": "Mailgun",
         "auth": {
-          "user": ${process.env.MAILGUN_SMTP_LOGIN},
-          "pass": ${process.env.MAILGUN_SMTP_PASSWORD}
+          "user": "${process.env.MAILGUN_SMTP_LOGIN}",
+          "pass": "${process.env.MAILGUN_SMTP_PASSWORD}"
         }
       }
     },
@@ -71,18 +71,18 @@ function createConfig(connectionUrl) {
     "database": {
       "client": "mysql",
       "connection": {
-        "host": ${dbConfig.hostname},
-        "port": ${dbConfig.port || '3306'},
-        "user": ${dbUser},
-        "password": ${dbPassword},
-        "database": ${dbName}
+        "host": "${dbConfig.hostname}",
+        "port": "3306",
+        "user": "${dbUser}",
+        "password": "${dbPassword}",
+        "database": "${dbName}"
       },
       "pool": { "min": 0, "max": 5 },
       "debug": false
     },
     "server": {
       "host": "0.0.0.0",
-      "port": ${process.env.PORT}
+      "port": "${process.env.PORT}"
     },
     "paths": {
       "contentPath": "${path.join(appRoot, '/content/')}"
