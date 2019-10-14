@@ -101,9 +101,9 @@ class CloudinaryAdapter extends StorageBase {
         debug('uploader:url', url);
 
         return new Promise((resolve, reject) => cloudinary.uploader.upload(imagePath, options.upload, (err, res) => {
-            console.log(options.upload)/////////////
+            
             if (err) {
-                console.log({err})
+                
                 return reject(new common.errors.GhostError({
                     err: err,
                     message: `Could not upload image ${imagePath}`
