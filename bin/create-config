@@ -55,10 +55,10 @@ function createConfig(connectionUrl) {
               "api_secret": "${process.env.CLOUDINARY_KEY}"
           },
           "upload": {
-              "use_filename": true,
+              "use_filename": false,
               "unique_filename": false,
               "overwrite": false,
-              "folder": "blog-images",
+              "folder": "blog_images",
               "tags": ["blog"]
           },
           "fetch": {
